@@ -1,0 +1,93 @@
+<VRTDataset rasterXSize="512" rasterYSize="256">
+  <SRS dataAxisToSRSAxisMapping="2,1">GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4326"]]</SRS>
+  <GeoTransform> -1.8000000000000000e+02,  7.0312500000000000e-01,  0.0000000000000000e+00,  9.0000000000000000e+01,  0.0000000000000000e+00, -7.0312500000000000e-01</GeoTransform>
+  <VRTRasterBand dataType="Byte" band="1">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">255</MDI>
+      <MDI key="STATISTICS_MINIMUM">255</MDI>
+      <MDI key="STATISTICS_STDDEV">0</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+    <ColorInterp>Red</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">data/east.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="256" RasterYSize="256" DataType="Byte" BlockXSize="256" BlockYSize="8" />
+      <SrcRect xOff="0" yOff="0" xSize="256" ySize="256" />
+      <DstRect xOff="256" yOff="0" xSize="256" ySize="256" />
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">data/west.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="256" RasterYSize="256" DataType="Byte" BlockXSize="256" BlockYSize="8" />
+      <SrcRect xOff="0" yOff="0" xSize="256" ySize="256" />
+      <DstRect xOff="0" yOff="0" xSize="256" ySize="256" />
+    </ComplexSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Byte" band="2">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">0</MDI>
+      <MDI key="STATISTICS_MEAN">0</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">0</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+    <ColorInterp>Green</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">data/east.tif</SourceFilename>
+      <SourceBand>2</SourceBand>
+      <SourceProperties RasterXSize="256" RasterYSize="256" DataType="Byte" BlockXSize="256" BlockYSize="8" />
+      <SrcRect xOff="0" yOff="0" xSize="256" ySize="256" />
+      <DstRect xOff="256" yOff="0" xSize="256" ySize="256" />
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">data/west.tif</SourceFilename>
+      <SourceBand>2</SourceBand>
+      <SourceProperties RasterXSize="256" RasterYSize="256" DataType="Byte" BlockXSize="256" BlockYSize="8" />
+      <SrcRect xOff="0" yOff="0" xSize="256" ySize="256" />
+      <DstRect xOff="0" yOff="0" xSize="256" ySize="256" />
+    </ComplexSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Byte" band="3">
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">0</MDI>
+      <MDI key="STATISTICS_MEAN">0</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">0</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+    <ColorInterp>Blue</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">data/east.tif</SourceFilename>
+      <SourceBand>3</SourceBand>
+      <SourceProperties RasterXSize="256" RasterYSize="256" DataType="Byte" BlockXSize="256" BlockYSize="8" />
+      <SrcRect xOff="0" yOff="0" xSize="256" ySize="256" />
+      <DstRect xOff="256" yOff="0" xSize="256" ySize="256" />
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">data/west.tif</SourceFilename>
+      <SourceBand>3</SourceBand>
+      <SourceProperties RasterXSize="256" RasterYSize="256" DataType="Byte" BlockXSize="256" BlockYSize="8" />
+      <SrcRect xOff="0" yOff="0" xSize="256" ySize="256" />
+      <DstRect xOff="0" yOff="0" xSize="256" ySize="256" />
+    </ComplexSource>
+  </VRTRasterBand>
+  <VRTRasterBand dataType="Byte" band="4">
+    <ColorInterp>Alpha</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">data/east.tif</SourceFilename>
+      <SourceBand>4</SourceBand>
+      <SourceProperties RasterXSize="256" RasterYSize="256" DataType="Byte" BlockXSize="256" BlockYSize="8" />
+      <SrcRect xOff="0" yOff="0" xSize="256" ySize="256" />
+      <DstRect xOff="256" yOff="0" xSize="256" ySize="256" />
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">data/west.tif</SourceFilename>
+      <SourceBand>4</SourceBand>
+      <SourceProperties RasterXSize="256" RasterYSize="256" DataType="Byte" BlockXSize="256" BlockYSize="8" />
+      <SrcRect xOff="0" yOff="0" xSize="256" ySize="256" />
+      <DstRect xOff="0" yOff="0" xSize="256" ySize="256" />
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

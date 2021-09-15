@@ -1,0 +1,110 @@
+MAP
+	CONFIG "MS_ERRORFILE" "stderr"
+
+	# Define the map.
+	NAME "alphabug"
+	PROJECTION
+		"init=epsg:4326"
+	END
+
+	EXTENT -180 -90 180 90
+	SIZE 512 256 
+	IMAGETYPE png
+
+    LAYER
+		NAME "east-bilinear"
+		TYPE RASTER
+		STATUS OFF
+
+		PROJECTION
+			"init=epsg:4326"
+		END
+		PROCESSING "RESAMPLE=BILINEAR"
+		DATA "data/east.tif"
+    END
+
+    LAYER
+		NAME "west-bilinear"
+		TYPE RASTER
+		STATUS OFF
+
+		PROJECTION
+			"init=epsg:4326"
+		END
+		PROCESSING "RESAMPLE=BILINEAR"
+		DATA "data/west.tif"
+    END
+
+    LAYER
+		NAME "east-west-tindex-bilinear"
+		TYPE RASTER
+		STATUS OFF
+
+		PROJECTION
+			"init=epsg:4326"
+		END
+		PROCESSING "RESAMPLE=BILINEAR"
+		TILEINDEX "tindex.shp"
+    END	
+
+    LAYER
+		NAME "east-nearest"
+		TYPE RASTER
+		STATUS OFF
+
+		PROJECTION
+			"init=epsg:4326"
+		END
+		PROCESSING "RESAMPLE=NEAREST"
+		DATA "data/east.tif"
+    END
+
+    LAYER
+		NAME "west-nearest"
+		TYPE RASTER
+		STATUS OFF
+
+		PROJECTION
+			"init=epsg:4326"
+		END
+		PROCESSING "RESAMPLE=NEAREST"
+		DATA "data/west.tif"
+    END
+
+    LAYER
+		NAME "east-west-tindex-nearest"
+		TYPE RASTER
+		STATUS OFF
+
+		PROJECTION
+			"init=epsg:4326"
+		END
+		PROCESSING "RESAMPLE=NEAREST"
+		TILEINDEX "tindex.shp"
+    END	
+
+    LAYER
+		NAME "east-west-vrt-nearest"
+		TYPE RASTER
+		STATUS OFF
+
+		PROJECTION
+			"init=epsg:4326"
+		END
+		PROCESSING "RESAMPLE=NEAREST"
+		DATA "combo.vrt"
+    END	
+
+    LAYER
+		NAME "east-west-vrt-bilinear"
+		TYPE RASTER
+		STATUS OFF
+
+		PROJECTION
+			"init=epsg:4326"
+		END
+		PROCESSING "RESAMPLE=BILINEAR"
+		DATA "combo.vrt"
+    END	
+	
+END
