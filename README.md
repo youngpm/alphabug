@@ -16,6 +16,10 @@ shp2img -m mapfile.map -o two-layers-bilinear.png -l "west-bilinear east-bilinea
 shp2img -m mapfile.map -o two-layers-nearest.png -l "west-nearest east-nearest" -e -3.515625 -35.15625 3.515625 35.15625 -s 32 320
 ```
 
+Here is what I [see with bilinear](example/bilinear.png).
+
+Here is what I [see with nearest](example/nearest.png).
+
 Composite via a tile index and the bilinear result has the artifact:
 ```
 shp2img -m mapfile.map -o east-west-tindex-bilinear.png -l "east-west-tindex-bilinear" -e -3.515625 -35.15625 3.515625 35.15625 -s 32 320
